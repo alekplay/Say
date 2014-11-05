@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>breakfast</key>
+	<dict>
+		<key>sound</key>
+		<string>breakfast.caf</string>
+		<key>text</key>
+		<string>Want to get breakfast?</string>
+	</dict>
+	<key>lunch</key>
+	<dict>
+		<key>sound</key>
+		<string>lunch.caf</string>
+		<key>text</key>
+		<string>Want to get lunch?</string>
+	</dict>
+	<key>dinner</key>
+	<dict>
+		<key>sound</key>
+		<string>dinner.caf</string>
+		<key>text</key>
+		<string>Want to get dinner?</string>
+	</dict>
+	<key>snack</key>
+	<dict>
+		<key>sound</key>
+		<string>snack.caf</string>
+		<key>text</key>
+		<string>Want to get a snack?</string>
+	</dict>
+	<key>coffee</key>
+	<dict>
+		<key>sound</key>
+		<string>coffee.caf</string>
+		<key>text</key>
+		<string>Want to get coffee?</string>
+	</dict>
+	<key>beer</key>
+	<dict>
+		<key>sound</key>
+		<string>beer.caf</string>
+		<key>text</key>
+		<string>Want to go out for a beer?</string>
+	</dict>
+	<key>movie</key>
+	<dict>
+		<key>sound</key>
+		<string>movie.caf</string>
+		<key>text</key>
+		<string>Want to see a movie?</string>
+	</dict>
+</dict>
+</plist>

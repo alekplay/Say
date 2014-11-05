@@ -1,25 +1,335 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eNk-NN-Xjw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--SAY-->
+        <scene sceneID="DDI-XW-ggT">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tableViewController id="icW-n9-aqX" customClass="MainTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xgg-P8-0qZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="reusableCell" rowHeight="52" id="7TO-d0-yXJ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7TO-d0-yXJ" id="IB7-au-TSY">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="icW-n9-aqX" id="Ahk-sr-INC"/>
+                            <outlet property="delegate" destination="icW-n9-aqX" id="lUo-f9-ol7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SAY" id="dKB-37-jBf"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGg-bN-j3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="904" y="141"/>
+        </scene>
+        <!--Success View Controller-->
+        <scene sceneID="0oA-fR-LTE">
+            <objects>
+                <viewController storyboardIdentifier="SuccessViewController" id="GIZ-ad-bO0" customClass="SuccessViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ol4-ca-od4"/>
+                        <viewControllerLayoutGuide type="bottom" id="7nV-IQ-kXS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="diV-Yl-ceW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THAT WAS EASY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOv-YC-4Pw">
+                                <rect key="frame" x="94" y="8" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2d-E5-O7j">
+                                <rect key="frame" x="35" y="221" width="250" height="125"/>
+                                <state key="normal" title="Your something was sent to xxxx">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="successAction:" destination="GIZ-ad-bO0" eventType="touchUpInside" id="Jpc-uk-bSj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.8666666666666667" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="successButton" destination="u2d-E5-O7j" id="iee-JX-oxE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z70-tM-hcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="143"/>
+        </scene>
+        <!--Add Friend View Controller-->
+        <scene sceneID="fQ8-iT-hkJ">
+            <objects>
+                <viewController storyboardIdentifier="AddFriendViewController" id="aiz-Za-Thc" customClass="AddFriendViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wac-G2-MM8"/>
+                        <viewControllerLayoutGuide type="bottom" id="fxD-dO-lGA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Vi-dH-C3a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLc-gg-tdX">
+                                <rect key="frame" x="23" y="158" width="275" height="52"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.67450980390000004" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="Search" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.52941176470588236" green="0.44313725490196076" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.33333333333333331" green="0.27058823529411763" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="Button pressed.png"/>
+                                <connections>
+                                    <action selector="searchAction:" destination="aiz-Za-Thc" eventType="touchUpInside" id="oXg-bP-tYQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzb-FL-Dbc">
+                                <rect key="frame" x="130" y="15" width="60" height="21"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.77647058823529413" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.6588235294117647" green="0.63137254901960782" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ei-5h-6jC">
+                                <rect key="frame" x="23" y="258" width="275" height="52"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.67450980390000004" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="INVITE" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.52941176469999995" green="0.4431372549" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.33333333329999998" green="0.27058823529999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="Button pressed.png"/>
+                                <connections>
+                                    <action selector="editProfileAction:" destination="KYw-0n-D2R" eventType="touchUpInside" id="NZ4-M9-J9a"/>
+                                    <action selector="inviteAction:" destination="aiz-Za-Thc" eventType="touchUpInside" id="4PB-bo-xrf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oub-Rc-IE0">
+                                <rect key="frame" x="23" y="358" width="275" height="52"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.67450980390000004" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="SHARE" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.52941176469999995" green="0.4431372549" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.33333333329999998" green="0.27058823529999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="Button pressed.png"/>
+                                <connections>
+                                    <action selector="editProfileAction:" destination="KYw-0n-D2R" eventType="touchUpInside" id="6uc-Ba-C9E"/>
+                                    <action selector="shareAction:" destination="aiz-Za-Thc" eventType="touchUpInside" id="HtK-AW-bVS"/>
+                                </connections>
+                            </button>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="27F-fT-bxn">
+                                <rect key="frame" x="35" y="169" width="250" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.8666666666666667" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="inviteButton" destination="0ei-5h-6jC" id="36Z-hv-TZE"/>
+                        <outlet property="searchButton" destination="cLc-gg-tdX" id="Xxl-IS-5MY"/>
+                        <outlet property="searchField" destination="27F-fT-bxn" id="YnD-nW-LHj"/>
+                        <outlet property="shareButton" destination="oub-Rc-IE0" id="LAg-Fm-HQG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2PL-IE-hB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="-535"/>
+        </scene>
+        <!--More View Controller-->
+        <scene sceneID="SL2-xb-ffW">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController" id="KYw-0n-D2R" customClass="MoreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DFI-ZD-clW"/>
+                        <viewControllerLayoutGuide type="bottom" id="MRk-uq-ojf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GPY-Ey-RTb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiQ-iM-1OI">
+                                <rect key="frame" x="129" y="8" width="63" height="23"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.77647058823529413" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.6588235294117647" green="0.63137254901960782" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qi-7p-yV0">
+                                <rect key="frame" x="23" y="158" width="275" height="52"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.67450980390000004" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="EDIT PROFILE " backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.52941176469999995" green="0.4431372549" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.33333333329999998" green="0.27058823529999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="Button pressed.png"/>
+                                <connections>
+                                    <action selector="editProfileAction:" destination="KYw-0n-D2R" eventType="touchUpInside" id="twj-Qs-Qre"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vj-30-Je3">
+                                <rect key="frame" x="23" y="258" width="275" height="52"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.67450980390000004" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="FEEDBACK" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.52941176469999995" green="0.4431372549" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.33333333329999998" green="0.27058823529999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="Button pressed.png"/>
+                                <connections>
+                                    <action selector="feedbackAction:" destination="KYw-0n-D2R" eventType="touchUpInside" id="2Ov-bd-IXC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfu-qh-jMQ">
+                                <rect key="frame" x="23" y="358" width="275" height="52"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.67450980390000004" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="LOG OUT" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.52941176469999995" green="0.4431372549" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.33333333329999998" green="0.27058823529999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="Button pressed.png"/>
+                                <connections>
+                                    <action selector="logOutAction:" destination="KYw-0n-D2R" eventType="touchUpInside" id="NI2-wB-ce5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.8666666666666667" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="editProfileButton" destination="2qi-7p-yV0" id="85u-q7-kc9"/>
+                        <outlet property="feedbackButton" destination="5vj-30-Je3" id="bGK-Ny-KbR"/>
+                        <outlet property="logOutButton" destination="kfu-qh-jMQ" id="ch0-6Y-Q4D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAX-LH-jvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="-534"/>
+        </scene>
+        <!--Main Page View Controller-->
+        <scene sceneID="0I7-Fw-fop">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="eNk-NN-Xjw" customClass="MainPageViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JwW-3r-i3P"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjF-z3-LMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="-1237"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="OVK-XW-aOO">
+            <objects>
+                <viewController storyboardIdentifier="LoginController" id="Cub-yL-CKx" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xnB-Ol-dvz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZfQ-Jk-DwY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a9f-gh-Isk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Nw-uE-dKA">
+                                <rect key="frame" x="16" y="235" width="288" height="45"/>
+                                <color key="textColor" red="0.6588235294" green="0.63137254899999995" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="41"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPs-LE-V49">
+                                <rect key="frame" x="16" y="288" width="288" height="45"/>
+                                <color key="textColor" red="0.6588235294" green="0.63137254899999995" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="41"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GET STARTED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYZ-0e-kZE">
+                                <rect key="frame" x="76" y="8" width="168" height="33"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.77647058823529413" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.6588235294117647" green="0.63137254901960782" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8J-J7-Ei4">
+                                <rect key="frame" x="35" y="490" width="250" height="52"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="LETS DO IT" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.52941176469999995" green="0.4431372549" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.33333333329999998" green="0.27058823529999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" backgroundImage="Button pressed.png"/>
+                                <state key="highlighted" backgroundImage="Button pressed.png">
+                                    <color key="titleColor" red="0.52941176469999995" green="0.4431372549" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.33333333329999998" green="0.27058823529999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="Cub-yL-CKx" eventType="touchUpInside" id="KOR-hB-hgH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.8666666666666667" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="loginButton" destination="h8J-J7-Ei4" id="GE3-LT-U6x"/>
+                        <outlet property="passwordTextField" destination="fPs-LE-V49" id="jn0-Tq-cTH"/>
+                        <outlet property="usernameTextField" destination="9Nw-uE-dKA" id="Uef-jx-kZN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xu6-0f-rgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6iK-IU-kAb">
+            <objects>
+                <navigationController storyboardIdentifier="MainTableViewController" automaticallyAdjustsScrollViewInsets="NO" id="ism-33-yfT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="LOd-yd-3uW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.87450980389999999" green="0.86666666670000003" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                            <color key="textColor" red="0.80000000000000004" green="0.77647058823529413" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" red="0.6588235294117647" green="0.63137254901960782" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="icW-n9-aqX" kind="relationship" relationship="rootViewController" id="8cQ-8F-Pjs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gtu-tp-kU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="-541"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Button pressed.png" width="250" height="51"/>
+        <image name="Button.png" width="250" height="52"/>
+    </resources>
 </document>
